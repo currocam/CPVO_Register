@@ -1,0 +1,5 @@
+Especie, Dirección del archivo
+Brassica napus, brassicanapus.json
+Citrus, naranjo.json
+Jasminum, jazmin.json
+Jasminum fruticans, fruticans.json
