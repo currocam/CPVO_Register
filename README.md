@@ -21,4 +21,4 @@ Para descargar la información respectiva a todas las variedades de las especies
 
 Para comprobar si la información de las especies indicadas está actualizada:
 
-> python buscarVariedades.py 1 "lista.txt"
+> python vigilanciaVariedades.py 1 "lista.txt"
