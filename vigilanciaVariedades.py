@@ -2,7 +2,7 @@
 import CPVO_Register as CPVO
 import pandas as pd
 import sys
-
+from time import time
 def leerArchivo(direccion="lista.txt"):
     """Lee un archivo con los nombres de las especies de interés y sus archivos respectivos con el siguiente formato
     
@@ -24,7 +24,8 @@ if __name__ == "__main__":
     
     python buscarVariedades.py 1 "lista.txt"
 
-    """    
+    """   
+    t0 = time()
     modo=sys.argv[1]
     direccion_archivo=sys.argv[2]
     data = pd.read_csv(direccion_archivo)
@@ -51,4 +52,4 @@ if __name__ == "__main__":
                 print(url)
                 print(archivo)
         print("Finalizamos el scraping para la especie "+ especie)
-
+    print("Realizado en %0.3fs" % (time() - t0))

@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import CPVO_Register as CPVO
 import sys
+from time import time
 if __name__ == "__main__":
     """
     Ejemplo de uso para generar un archivo con todas las variedades de una especie.
@@ -12,6 +13,7 @@ if __name__ == "__main__":
     python buscarVariedades.py "Brassica napus" "entradas.json" 1
 
     """
+    t0 = time() #Medir tiempo utilizado
     especie= sys.argv[1] 
     direccion_archivo=sys.argv[2]
     modo=sys.argv[3]
@@ -29,3 +31,4 @@ if __name__ == "__main__":
             print('Ha habido un error')
             print(url)
             print(direccion_archivo)
+    print("Realizado en %0.3fs" % (time() - t0))
